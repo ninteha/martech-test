@@ -1,0 +1,28 @@
+{
+  "name": "martech-test",
+  "version": "1.0.0",
+  "description": "MarTech Landing Page with Authentication",
+  "scripts": {
+      "dev": "concurrently \"npm run watch\" \"npm run build-css\" \"npm run minify\" \"npm run serve\"",
+      "serve": "live-server --port=3000 --open=./ --watch=*.html,styles/*.css",
+      "watch": "tsc --watch",
+      "build-css": "sass styles/main.scss styles/main.css --watch",
+      "build-css-once": "sass styles/main.scss styles/main.css",
+      "build": "npm run compile && npm run build-css-once && npm run minify",
+      "compile": "tsc",
+      "minify": "terser scripts/main.js -o scripts/main.min.js --compress --mangle",
+      "optimize-images": "imagemin images/* --out-dir=images/optimized --plugin=mozjpeg --plugin=pngquant --plugin=svgo",
+      "production": "npm run optimize-images && npm run build"
+  },
+  "devDependencies": {
+      "typescript": "^5.0.0",
+      "terser": "^5.16.0",
+      "sass": "^1.69.0",
+      "live-server": "^1.2.2",
+      "concurrently": "^8.2.0",
+      "imagemin-cli": "^8.0.0",
+      "imagemin-mozjpeg": "^10.0.0",
+      "imagemin-pngquant": "^9.0.0",
+      "imagemin-svgo": "^10.0.0"
+  }
+}

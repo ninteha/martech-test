@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MarTech Landing Page</title>
+        <link rel="stylesheet" href="styles/main.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preload" href="scripts/main.min.js" as="script" />
+        <link rel="dns-prefetch" href="//api.dating.com" />
+    </head>
+
+    <body>
+        <section class="hero">
+            <div class="container">
+                <!-- left side image -->
+                <div class="hero-image">
+                    <img
+                        src="images/optimized/hero.png"
+                        draggable="false"
+                        alt="Hero Image"
+                        class="hero-img"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
+                <!-- right side content -->
+                <div class="hero-list">
+                    <h1 class="hero-title">
+                        How to <br />
+                        Participate
+                    </h1>
+                    <ol class="hero-steps">
+                        <li class="hero-list-item">
+                            <span class="hero-list-item-number">1.</span>Subscribe to our News
+                        </li>
+                        <li class="hero-list-item">
+                            <span class="hero-list-item-number">2.</span>
+                            <button class="hero-button">SIGN UP</button>
+                        </li>
+                        <li class="hero-list-item">
+                            <span class="hero-list-item-number">3.</span>Check your email inbox
+                        </li>
+                        <li class="hero-list-item">
+                            <span class="hero-list-item-number">4.</span>Wait till September 22
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Sign Up -->
+        <div class="modal" id="signUpModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose" aria-label="Close">
+                    <img
+                        src="images/optimized/close-modal.svg"
+                        alt="Close"
+                        draggable="false"
+                        class="modal-close-img"
+                        loading="lazy"
+                        decoding="async"
+                        aria-label="Close Modal"
+                    />
+                </button>
+                <section class="modal-section-thank-you">
+                    <h2 class="modal-section-thank-you-title">Thank You</h2>
+                    <p class="modal-section-thank-you-description">
+                        To complete registration, please check your e-mail
+                    </p>
+                </section>
+                <section class="modal-content-section">
+                    <h2 class="modal-content-section-title">
+                        To register, enter the mail to which our news is sent and set your password
+                    </h2>
+                    <form class="modal-content-section-form" id="modalForm" novalidate>
+                        <div class="modal-content-section-form-item">
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Example@email.com"
+                                class="modal-content-section-input"
+                            />
+                            <img
+                                src="images/optimized/input-error.svg"
+                                alt="Input Error"
+                                id="emailErrorIcon"
+                                loading="lazy"
+                                decoding="async"
+                                class="modal-content-section-input-error-icon"
+                            />
+                            <span id="emailError" class="modal-content-section-input-error"> </span>
+                        </div>
+                        <div class="modal-content-section-form-item">
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Password"
+                                class="modal-content-section-input"
+                            />
+                            <img
+                                src="images/optimized/input-error.svg"
+                                alt="Input Error"
+                                id="passwordErrorIcon"
+                                loading="lazy"
+                                decoding="async"
+                                class="modal-content-section-input-error-icon"
+                            />
+                            <span id="passwordError" class="modal-content-section-input-error">
+                            </span>
+                        </div>
+                        <button disabled="true" type="submit" class="modal-content-section-button">
+                            SUBMIT
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <script src="scripts/main.min.js"></script>
+    </body>
+</html>
