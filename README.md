@@ -1,5 +1,7 @@
 # MarTech Landing Page - Тестовое задание
 
+**Live Demo:** [https://martech-sd.netlify.app/](https://martech-sd.netlify.app/)
+
 Тестовое задание на вакансию **Frontend Developer** в **MarTech SDVentures**.
 
 ## Задание
